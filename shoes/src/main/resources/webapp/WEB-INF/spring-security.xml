@@ -12,11 +12,11 @@
 
            <security:http auto-config="true">
            
-              <security:intercept-url pattern="/webapp/resources/*" access="permitAll" />
+              <!-- <security:intercept-url pattern="/webapp/resources/*" access="permitAll" /> -->
                <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
                <security:intercept-url pattern="/user/**" access="hasRole('ROLE_USER')" />                    
                <security:intercept-url pattern="/login" access="permitAll"/>
-               <security:intercept-url pattern="/resources/**" access="permitAll"/>
+             <!--   <security:intercept-url pattern="/resources/**" access="permitAll"/> -->
                
                      <security:form-login  
                      login-page="/login"
@@ -48,7 +48,7 @@
                      <security:jdbc-user-service
                            data-source-ref="dataSource"
                            users-by-username-query="select email,password,'TRUE' as enabled from user where email=?"
-                           authorities-by-username-query="select email,role from user where email=?" />
+                           authorities-by-username-query="select email,role from user where email=? AND enabled='TRUE'" />
               </security:authentication-provider>
        </security:authentication-manager>   
 </beans>

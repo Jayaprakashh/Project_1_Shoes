@@ -86,11 +86,22 @@
 						</a>
 					</div>
 					 <div class="btn-group cart">
-					<a href="customerDetails?tot=<c:out value="${tot}"/>">
+					
+						<c:if test="${pageContext.request.userPrincipal.name  != null}">
+                         <a href="customerDetails?tot=<c:out value="${tot}"/>">
 						<button type="button" class="btn btn-danger">
 							Check Out
 						</button>
 						</a>
+                 		</c:if>
+						<c:if test="${pageContext.request.userPrincipal.name  == null}">
+						
+                         <a href="<c:url value='/login' />">
+						<button type="button" class="btn btn-danger">
+							Check Out
+						</button>
+						</a>
+                 		</c:if>
 					</div>
              </div>
              

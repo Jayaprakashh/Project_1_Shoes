@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <head>
 <title>ONLINE SHOES</title>
 <meta charset="utf-8">
@@ -175,7 +176,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 						<img alt="Carousel Bootstrap Third"
 							src=" ${pageContext.request.contextPath}/resources/images/12.jpg" />
 						<div class="carousel-caption">
-							<h4>Five Shoe</h4>
+							<h4>Six Shoe</h4>
 												
 						</div>
 					</div>
@@ -183,15 +184,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 						<img alt="Carousel Bootstrap Third"
 							src=" ${pageContext.request.contextPath}/resources/images/13.jpg" />
 						<div class="carousel-caption">
-							<h4>Five Shoe</h4>
+							<h4>Seven Shoe</h4>
 												
 						</div>
 					</div>
 					<div class="item">
-						<img alt="Carousel Bootstrap Third"
-							src=" ${pageContext.request.contextPath}/resources/images/14.jpg" />
+						<%-- <img alt="Carousel Bootstrap Third"
+							src=" ${pageContext.request.contextPath}/resources/images/14.jpg" /> --%>
+							<img alt="Carousel Bootstrap Third"
+							src="<c:url value='/resources/images/14.jpg' />" />
+							
 						<div class="carousel-caption">
-							<h4>Five Shoe</h4>
+							<h4>Eight Shoe</h4>
 												
 						</div>
 					</div>

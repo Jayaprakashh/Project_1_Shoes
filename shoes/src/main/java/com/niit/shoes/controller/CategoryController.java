@@ -22,7 +22,7 @@ import com.niit.sback.model.SupplierModel;
 public class CategoryController {
 
  
-      @Autowired
+     @Autowired
       CategoryDao categorys;
       @Autowired
       SupplierDao supplier;

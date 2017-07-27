@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="./resources/css/caroualresponsive.css">
 </head>
 <body>
+<jsp:include page="Header.jsp"/>
 <br>
 <br>
 <br>

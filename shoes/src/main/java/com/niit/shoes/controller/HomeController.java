@@ -265,6 +265,10 @@ public class HomeController {
 	public String userLogged() { 
 		return "redirect:/";	
 	}
+   @RequestMapping("/noAccessPage")
+	public String noAccessPage() { 
+		return "noAccessPage";	
+	}
  	
    }
 
